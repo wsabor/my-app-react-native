@@ -9,11 +9,21 @@ const App = () => {
   return (
     <View style={styles.container}>
       <Logo />
+      <Text style={styles.title}>
+        Curso Técnico em Desenvolvimento de Sistemas
+      </Text>
+      <Text style={styles.subtitle}>Portfolio de apps:</Text>
       <TouchableOpacity
         style={styles.button}
         onPress={() => router.push("/MeuComponente")}
       >
         <Text style={styles.buttonText}>Meu Componente</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => router.push("/Saudacao")}
+      >
+        <Text style={styles.buttonText}>Saudação</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.button}
@@ -28,16 +38,36 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
+    justifyContent: "flex-start",
     alignItems: "center",
+    padding: 16,
+    gap: 8,
   },
   button: {
-    backgroundColor: "blue",
-    padding: 10,
-    borderRadius: 5,
+    backgroundColor: "red",
+    padding: 12,
+    borderRadius: 8,
+    minWidth: 200,
+    alignItems: "center",
   },
   buttonText: {
     color: "white",
+    fontSize: 18,
+    fontWeight: 500,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 600,
+    textAlign: "center",
+    paddingHorizontal: 32,
+    marginBottom: 8,
+  },
+  subtitle: {
+    fontSize: 20,
+    fontWeight: 500,
+    textAlign: "center",
+    paddingHorizontal: 32,
+    marginBottom: 8,
   },
 });
 

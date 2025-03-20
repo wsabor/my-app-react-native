@@ -3,7 +3,7 @@ import { View, Image, StyleSheet } from "react-native";
 
 const Logo = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Image
         source={require("../../assets/images/senai-logo.png")}
         style={styles.logo}
@@ -13,9 +13,16 @@ const Logo = () => {
 };
 
 const styles = StyleSheet.create({
+  container: {
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 16,
+  },
   logo: {
-    width: 200,
-    height: 50,
+    minWidth: 200,
+    minHeight: 50,
+    maxWidth: 300,
+    maxHeight: 70,
     margin: 16,
     alignSelf: "center",
   },
